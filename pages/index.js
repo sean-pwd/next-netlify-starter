@@ -33,15 +33,15 @@ export default function Home() {
                 <div>{acc.accLogin}</div>
               </Col>
             </Row>
-
             <Row>
               {acc.sites.map((site, index) => (
                 <Col md={4} key={index}>
                   <Card className="my-3">
+                    <Card.Header>
+                      {site.name}
+                    </Card.Header>
                     <Card.Body>
-                      <Card.Title>
-                        {site.name}
-                      </Card.Title>
+
                       <Card.Subtitle className="mb-3">
                         <a href={site.url}>{site.url}</a>
                       </Card.Subtitle>
@@ -49,13 +49,13 @@ export default function Home() {
                         <img src={site.netlifyBadge} />
                       </a>
                       <br />
-                      <Button variant="primary" className="my-3" href={site.githubUrl}>Github Repository</Button>
+                      <Button variant="outline-success" className="my-3" href={site.githubUrl}>Github Repository</Button>
                     </Card.Body>
                   </Card>
                 </Col>
               ))}
-
             </Row>
+            <hr />
           </div>
         ))}
 
