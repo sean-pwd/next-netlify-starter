@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import sites from '../data/sites.js'
+
 
 export default function Home() {
   return (
@@ -13,12 +15,27 @@ export default function Home() {
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          description
         </p>
-        <h2>Castle Craft Upholstery</h2>
-        <a href="https://app.netlify.com/sites/castlecraft/deploys">
-          <img src="https://api.netlify.com/api/v1/badges/8d1fc77c-309b-44cd-9157-517f1dd73110/deploy-status"></img>
-        </a>
+        <div className="sites">
+        {sites.map((acc, index) => (
+          <div key={index} className="card">
+            <h2>{acc.accName}</h2>
+            <div>{acc.accLogin}</div>
+            {acc.sites.map((site, index) => (
+              <div key={index} className="card">
+                <a href={site.url}><h3>{site.name}</h3></a>
+                <a href={site.netlifyUrl}>
+                  <img src={site.netlifyBadge} />
+                </a>
+                <br /> 
+                <a href={site.githubUrl}>Github Repository</a>
+              </div>
+            ))}
+          </div>
+        ))}
+        </div>
+   
       </main>
 
       <Footer />
