@@ -1,7 +1,20 @@
 export default [
   {
-    accName: "Personal Projects",
-    accLogin: "emerson.sean@gmail.com",
+    accName: "sean-pwd - Paid Sites",
+    accLogin: "sean@powerfulwebdesign.com.au (github)",
+    sites: [
+      {
+        name: "Powerful Web Design",
+        url: "https://www.powerfulwebdesign.com.au/",
+        netlifyBadge: "https://api.netlify.com/api/v1/badges/3ab98656-ede4-421a-86a8-4c6ae1bc1cf3/deploy-status",
+        netlifyUrl: "https://app.netlify.com/sites/powerfulweb/deploys",
+        githubUrl: "https://github.com/powerfulweb-free/powerfulweb-new"
+      }
+    ]
+  },
+  {
+    accName: "sean-free - Personal Projects",
+    accLogin: "emerson.sean@gmail.com (email)",
     sites: [
       {
         name: "Castle Craft Upholstery",
